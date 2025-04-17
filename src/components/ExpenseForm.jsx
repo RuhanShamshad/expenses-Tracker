@@ -1,4 +1,3 @@
-// src/components/ExpenseForm.js
 import React, { useState } from "react";
 import { db } from "../firebase-config/firebase";
 import { collection, addDoc } from "firebase/firestore";
@@ -17,7 +16,7 @@ function ExpenseForm() {
       .then(() => {
         console.log("User signed out");
         navigate("/");
-        // Redirect or update UI here
+        
       })
       .catch((error) => {
         console.error("Sign-out error:", error);

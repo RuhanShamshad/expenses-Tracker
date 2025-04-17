@@ -140,3 +140,96 @@ body, html {
 .submit-button:hover {
   background-color: #023e8a;
 }
+/* Reset default margin/padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fc;
+}
+
+/* Main container for Expense List */
+.expense-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title of the Expense List */
+.expense-title {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* Styling for the Expense List */
+.expense-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Each expense item styling */
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.expense-item:last-child {
+  border-bottom: none;
+}
+
+/* Description styling */
+.expense-description {
+  flex-grow: 1;
+  font-weight: 500;
+}
+
+/* Amount styling */
+.expense-amount {
+  font-weight: 600;
+  color: #2c97f1;
+}
+
+/* Delete button styling */
+.delete-button {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #e03a3a;
+}
+
+/* Total Expense Styling */
+.total-expense {
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+.total-expense strong {
+  font-size: 1.6rem;
+  color: #2c97f1;
+}

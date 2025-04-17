@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { db } from "../firebase-config/firebase";
 import { collection, onSnapshot, query, orderBy, deleteDoc, doc } from "firebase/firestore";
-
+import '../App.css'
 
 function ExpenseList() {
   const [expenses, setExpenses] = useState([]);
@@ -35,14 +35,19 @@ function ExpenseList() {
       console.error("Error deleting expense:", error);
     }
   };
-
+  const totalExpense = expenses.reduce((total, expense) => total + expense.amount, 0);
   return (
-    <div style={{ marginTop: "2rem", textAlign: "center" }}>
-    <h3>Expense History</h3>
+    <>
+    <div  className="expense-container" style={{ marginTop: "2rem", textAlign: "center" }}>
+    <h3 className="expense-title">Expense History</h3>
+    <ul className="expense-list">
     {expenses.map(({ id, description, amount }) => (
-  <li key={id} style={{ marginBottom: "10px" }}>
-    {description} - ${amount}
+  <li key={id} style={{ marginBottom: "10px" }} className="expense-item">
+    {/* {description} - ${amount} */}
+    <span  className="expense-description">{description}</span>
+   <span  className="expense-amount">${amount}</span>
     <button
+     className="delete-button"
       onClick={() => handleDelete(id)}
       style={{
         marginLeft: "10px",
@@ -58,7 +63,13 @@ function ExpenseList() {
     </button>
   </li>
 ))}
+</ul>
+<div className="total-expense">
+<strong><p>Total Expense: ${totalExpense.toFixed(2)}</p></strong>
+</div>
+
   </div>
+  </>
   );
 }
 
