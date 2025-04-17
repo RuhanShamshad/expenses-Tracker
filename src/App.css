@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Sign-In Page Styling */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.signin-container {
+  /* remove any margin-top if you had one */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 70vh;
+}
+
+
+.signin-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.google-signin-button {
+  background-color: #4285f4;
   color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.google-signin-button:hover {
+  background-color: #3367d6;
+  transform: scale(1.02);
+}
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+html, body {
+  height: 100%;
+  background-color: #f5f5f5; /* Optional: neutral background */
+  font-family: 'Segoe UI', sans-serif;
+}
+.google-logo{
+  width: 20px;
+  margin-right: 10px;
+  margin-top: 0px;
+}
+/* Reset default margin/padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  background-color: #f7f9fc;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Main Container */
+.expense-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.expense-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.expense-title {
+  color: #2d2d2d;
+  font-size: 1.8rem;
+}
+
+/* Logout Button */
+.logout-button {
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+/* Form */
+.expense-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Input Fields */
+.form-input {
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #0077b6;
+  outline: none;
+}
+
+/* Submit Button */
+.submit-button {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #023e8a;
 }
